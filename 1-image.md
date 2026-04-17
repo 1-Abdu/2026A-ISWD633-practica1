@@ -17,6 +17,7 @@ Descargar la imagen **hello-world**
 # COMPLETAR
 
 **¿Qué es nginx?**
+Nginx es un programa que funciona como un potente servidor web y un "director de tráfico" en internet. Su trabajo principal es recibir las peticiones de las personas que visitan un sitio y entregárselas de forma rápida y ordenada, asegurándose de que la página no se sature incluso cuando hay miles de usuarios conectados al mismo tiempo. Es muy valorado porque es extremadamente ligero, rápido y ayuda a repartir el trabajo de manera eficiente para que los sitios web siempre estén disponibles.
 # COMPLETAR 
 
 Descargar la imagen  **nginx** en la versión **alpine**
