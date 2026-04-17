@@ -21,6 +21,9 @@ Nginx es un programa que funciona como un potente servidor web y un "director de
 # COMPLETAR 
 
 Descargar la imagen  **nginx** en la versión **alpine**
+```
+docker pull nginx:alpine
+```
 # COMPLETAR
 
 ### Listar imágenes
@@ -29,7 +32,8 @@ Descargar la imagen  **nginx** en la versión **alpine**
 docker images
 ```
 
-# COLOCAR UNA CAPTURA DE PANTALLA DEL RESULTADO 
+# COLOCAR UNA CAPTURA DE PANTALLA DEL RESULTADO   
+<img width="1113" height="627" alt="image" src="https://github.com/user-attachments/assets/65a08a5b-b537-43a0-8100-fafa0b605397" />
 
 **Identificadores**
 
