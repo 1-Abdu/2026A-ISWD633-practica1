@@ -12,6 +12,9 @@ Crear el contenedor  **srv-web** usando la imagen nginx version alpine
 Si creas un contenedor en Docker sin asignarle un nombre específico utilizando la opción --name, Docker asignará automáticamente un nombre aleatorio al contenedor. Este nombre suele consistir en una combinación de palabras y números.  
 
 Crear el contenedor usando la imagen hello-world
+```bash
+docker create hello-world
+```
 # COMPLETAR
 
 ### Listar los contenedores ejecutándose o no
@@ -26,6 +29,10 @@ docker ps -a
 docker start <nombre contenedor o identificador>
 ```
 Iniciar el contenedor srv-web 
+
+```bash
+docker start srv-web
+```
 # COMPLETAR
 
 ### Listar los contenedores ejecutándose
@@ -48,9 +55,14 @@ docker run --name <nombre contenedor> <nombre imagen>:<tag>
 ![Ecosistema de Docker](dockerRun.PNG)
 
 Crear y ejecutar inmediatamente el contenedor **srv-web2** usando la imagen nginx:alpine
+```bash
+docker run --name srv-web2 nginx:alpine
+```
 # COMPLETAR
 
 **¿Qué sucede luego de la ejecución del comando?**
+El terminal entra en modo interactivo o muestra los logs en tiempo real del servidor Nginx. Como no se usó la opción `-d`, el proceso se queda "atado" a la consola actual; no podrás escribir nuevos comandos en esa ventana hasta que detengas el contenedor (normalmente con `Ctrl + C`).
+
 # COMPLETAR  
 
 Cuando ejecutas un contenedor en primer plano sin la opción -d (modo detach), el contenedor captura la entrada estándar (stdin) del terminal, lo que significa que el terminal queda "atrapado" y no puedes introducir más comandos hasta que detengas el contenedor.
@@ -63,6 +75,10 @@ Cuando un contenedor se ejecuta en segundo plano, Docker devuelve el control al 
 docker run -d --name <nombre contenedor> <nombre imagen>:tag
 ```
 Crear y ejecutar inmediatamente el contenedor **srv-web3** en modo detach usando la imagen nginx:alpine
+
+```bash
+docker run -d --name srv-web3 nginx:alpine
+```
 # COMPLETAR
 
 ### Para eliminar un contenedor
@@ -71,9 +87,15 @@ Crear y ejecutar inmediatamente el contenedor **srv-web3** en modo detach usando
 docker rm <nombre contenedor>
 ```
 Eliminar el contenedor que se creó a partir de la imagen hello-world 
+```bash
+docker rm <ID_o_nombre_aleatorio>
+```
 # COMPLETAR
 
 Verificar que el contenedor que se eliminó
+```bash
+docker ps -a
+```
 # COMPLETAR
 
 ### Para eliminar un contenedor que esté ejecutándose
@@ -82,12 +104,21 @@ Verificar que el contenedor que se eliminó
 docker rm -f <nombre contenedor>
 ```
 Eliminar el contenedor **srv-web3** 
+```
+docker rm -f srv-web3
+````
 # COMPLETAR
 
 Verificar que el contenedor que se eliminó
+```bash
+docker ps -a
+````
 # COMPLETAR
 
 ### Para inspecionar un contenedor 
 
 Inspeccionar el contenedor **srv-web** 
+```
+docker inspect srv-web
+```
 # COMPLETAR
