@@ -17,6 +17,7 @@ Descargar la imagen **hello-world**
 # COMPLETAR
 
 **¿Qué es nginx?**
+
 Nginx es un programa que funciona como un potente servidor web y un "director de tráfico" en internet. Su trabajo principal es recibir las peticiones de las personas que visitan un sitio y entregárselas de forma rápida y ordenada, asegurándose de que la página no se sature incluso cuando hay miles de usuarios conectados al mismo tiempo. Es muy valorado porque es extremadamente ligero, rápido y ayuda a repartir el trabajo de manera eficiente para que los sitios web siempre estén disponibles.
 # COMPLETAR 
 
@@ -51,6 +52,19 @@ Inspeccionar la imagen hello-world
 # COMPLETAR
 
 **¿Con qué algoritmo se está generando el ID de la imagen**
+
+El ID de una imagen en Docker se genera utilizando el algoritmo SHA-256.
+
+Este identificador es el resultado de un proceso llamado almacenamiento direccionable por contenido (content-addressable storage). En lugar de basarse en un nombre o una etiqueta, Docker calcula un hash de 256 bits (64 caracteres hexadecimales) basándose en el archivo de configuración JSON de la imagen. Este archivo contiene información crítica como:
+
+Los hashes de las capas que componen la imagen.
+
+Variables de entorno.
+
+Arquitectura del sistema.
+
+Comandos por defecto (ENTRYPOINT/CMD).
+
 # COMPLETAR
 
 ### Filtrar imágenes
@@ -61,6 +75,7 @@ docker images | grep <termino a buscar>
 ```
 
 ### Para eliminar una imagen
+
 Eliminar permanentemente la imagen de tu sistema Docker.
 
 ```
@@ -68,6 +83,9 @@ docker rmi <nombre imagen>:<tag>
 ```
 
 Eliminar la imagen hello-world 
+```
+docker rmi hello-world:latest
+```
 # COMPLETAR
 
 -f: Es la opción para forzar la eliminación de la imagen incluso si hay contenedores en ejecución que utilizan esa imagen.
